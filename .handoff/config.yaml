@@ -1,0 +1,27 @@
+# 跨機器接力設定 — 依你的環境修改 vault 路徑
+machines:
+  andrewmac-mini:
+    label: Mac mini（常駐）
+    tailscale: andrewmac-mini
+    vault: ~/Developer/ObsidianVault
+  Macmini:
+    label: Mac mini（常駐）
+    tailscale: andrewmac-mini
+    vault: ~/Developer/ObsidianVault
+  andrews-macbook-pro:
+    label: MacBook Pro（行動）
+    tailscale: andrews-macbook-pro
+    vault: ~/Developer/ObsidianVault
+  cursor:
+    label: Cursor Cloud Agent
+    tailscale: cursor
+    vault: ""  # 雲端無本機 Vault，靠 git 同步
+
+# 接力時要掃描的 Vault 路徑（相對於 vault 根目錄）
+vault_watch:
+  - 01-Projects
+  - 03-Resources/AI-Workflow
+  - 02-Areas/DailyNotes/Journal
+
+# AI Brief 搜尋模式（接力時自動列出）
+ai_brief_glob: "*-AI-Brief.md"
